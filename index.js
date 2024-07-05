@@ -21,13 +21,12 @@ app.use(cors({
     origin: "https://expenzify.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+    optionsSuccessStatus: 200
 }));
 
 //routes
 //user routes
 app.use('/api/v1/users', require('./routes/userRoute'))
-
 //transaction routes
 app.use('/api/v1/transactions', require("./routes/transactionRoutes"))
 
