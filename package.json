@@ -1,13 +1,12 @@
 {
-  "name": "expense-management",
+  "name": "server",
   "version": "1.0.0",
   "description": "expense tracker app",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo 'Error: no test specified' && exit 1"
   },
   "keywords": [],
   "author": "",
