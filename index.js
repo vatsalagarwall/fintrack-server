@@ -15,18 +15,16 @@ connectDb()
 const app = express()
 
 //middlewares
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(cors())
+//middlewares
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(cors({
+    origin: ["https://fintrack-client.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+}));
 
 
-app.use(
-    cors({
-        origin: ["https://fintrack-client.vercel.app"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true,
-    })
-);
 //routes
 //user routes
 app.use('/api/v1/users', require('./routes/userRoute'))
